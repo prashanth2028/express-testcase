@@ -6,14 +6,16 @@
     "build": "babel src -s -D -d lib",
     "start": "npm run build && node --env-file=.env lib/index.js",
     "development": "nodemon --exec babel-node --env-file=.env src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --no-cache --verbose --silent --runInBand test/TestCase.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.21.1",
+    "mongodb-memory-server": "^10.1.2",
     "mongoose": "^8.8.2",
     "nodemon": "^3.1.7"
   },
