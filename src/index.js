@@ -21,4 +21,5 @@ app.listen(process.env.PORT, () => {
     console.log(`prot is running on ${process.env.PORT}`);
 });
 
+export default app;
 
